@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Learning the Plugin API"
+date:   2016-01-04 13:39:36 -0500
+categories: blog updates
+---
+
 In this series of posts, I'm documenting my project to build a "find-file" IntelliJ plugin.  The goal is to create a plugin which provides the same functionality as the built in "find-file" function in Emacs ("c-x c-f").
 After setting up the development environment, I went through the tutorials on plugins.  They don't say anything about how to add UI components, so I decided to go into the source code for the built in c-x c-f action, to see how it adds a UI component, hoping that the same logic will apply for a plugin.
 I have no idea where to start in the code, so I go to Grep.  I search recursively for the action name "file...", which leads me to an xml file that doesn't seem  useful.  At this point, I realize that I don't have enough background knowledge to start figuring out where to look, so I go back to Google.  A search for "built in actions intellij source code", leads me to this page, http://keithlea.com/idea-actions/.  It shows me that the ID of that action is called "GotoFile".  Back to grep!  Grep for "GotoFile" finds me "GotoFileAction.java".  I Use the c-x c-f, I'm trying to replace to go there directly.
